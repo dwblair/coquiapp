@@ -14,6 +14,8 @@
 		<script src="js/p5.min.js"></script>
 		<script src="js/p5.sound.min.js"></script>
 		<script src="js/p5handler.js"></script>
+		<script src="js/instafeed.min.js"></script>
+		<script src="js/instaHandlerjs"></script>
 	</head>
 	<body>
 
@@ -41,7 +43,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8"><div class="well" id="p5fft"></div></div>
-        <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
+        <div class="col-md-4"><div class="well"><div id="instafeed"></div><input type="text" id="instaTag"/>
+	    <button onclick="runfeed">GET</button></div></div>
     </div>
     <div class="row">
         <div class="col-md-6" ><div class="well" id="p5bar"></div></div>
