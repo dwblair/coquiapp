@@ -41,7 +41,7 @@ function draw(){
 
     specBar.rect(0,(255-maxFre)/255*height,100,maxFre/255*height);
     image(specBar,610,0,100,400);
-    document.getElementById('p5bar').innerHTML = "Max: " + maxSpec;
+    document.getElementById('p5bar').innerHTML = "Max: " + maxFre;
 }
 
 
