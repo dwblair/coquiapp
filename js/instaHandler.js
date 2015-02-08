@@ -7,7 +7,7 @@ function runfeed(){
 	clientId: '1ed94341d26548b9b51bd42bfb0dc0e4',
 	resolution: 'low_resolution',
 	limit: 1,
-	template: '<a href="{{link}}"><img src="{{image}}" /></a><r/><h3>location: {{location}}</h3><br/>'
+	template: '<a href="{{link}}"><img src="{{image}}" /></a><r/><h5>location: "{{location}}"</h5><br/>'
     });
     feed.run();
 };
