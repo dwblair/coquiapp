@@ -8,7 +8,7 @@ var feed = new Instafeed({
     template: '<a href="{{link}}"><img src="{{image}}" /></a>'
 });
 
-var runfeed = function(){
+function runfeed(){
     tgName = "openwater" + document.getElementById("instaTag").value;
     feed.run()
 };
