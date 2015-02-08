@@ -39,7 +39,7 @@ function draw(){
     }
     endShape();
 
-    specBar.rect(0,(255-maxSpec)/255*height,100,maxSpec/255*height);
+    specBar.rect(0,(255-maxFre)/255*height,100,maxFre/255*height);
     image(specBar,610,0,100,400);
     document.getElementById('p5bar').innerHTML = "Max: " + maxSpec;
 }
