@@ -44,9 +44,17 @@ function draw(){
     endShape();
 
     specBar.rect(map(maxFre,0,spectrum.length,0,500)+3,0,5,100);
+    textSize(32);
+    //var maxFreReal = int(maxFre*dF);
+    //String mfr = str(32);
+    //stroke(255,255,51);
+    var s = int(maxFre*dF);
+    var p = s + " Hz";
+    text(p, map(maxFre,0,spectrum.length,0,500),200);
     image(specBar,0,150,710,10);
-    fill(255,0,0);
-    document.getElementById('p5bar').innerHTML = "Dominant Frequency (Hz): " + int(maxFre*dF);
+    stroke(255,255,51);
+    text(p, map(maxFre,0,spectrum.length,0,500),200);
+    //document.getElementById('p5bar').innerHTML = "Dominant Frequency (Hz): " + int(maxFre*dF);
 }
 
 
