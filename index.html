@@ -15,6 +15,8 @@
 		<script src="js/p5.sound.min.js"></script>
 		<script src="js/p5handler.js"></script>
 		<script src="js/instafeed.min.js"></script>
+                 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+                <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 <style>
 .Textwrap {
 float: right;
@@ -68,7 +70,15 @@ Above, you're seeing a histogram of all of the frequencies that are coming in th
         </div> 
 
         <div class="col-lg-4">
-          <div class="well"><iframe width="320" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Boston%2C%20MA%2C%20United%20States&key=AIzaSyAceDYtQ2v6SDia9mBzF9cdF_g2X5uAzFA"></iframe>
+          <div class="well">
+
+
+<div id="map" style="width: 320px; height: 400px"></div>
+
+
+
+<!--<iframe width="320" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Boston%2C%20MA%2C%20United%20States&key=AIzaSyAceDYtQ2v6SDia9mBzF9cdF_g2X5uAzFA"></iframe> -->
+
           <h2>Geolocation</h2>
           <p>Often, a sensor is used to analyze materials that came from a particular <i>place</i>.  In the above map, select the location where you gathered your sample, and then click 'mark location', below.
           <p><a class="btn btn-primary" href="#" role="button">Mark location &raquo;</a></p>
@@ -117,5 +127,57 @@ Above, you're seeing a histogram of all of the frequencies that are coming in th
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/instaHandler.js"></script>
+	<script>
+		var map = L.map('map').setView([42.352609, -71.065868], 13);
+		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			id: 'examples.map-i875mjb7'
+		}).addTo(map);
+
+		L.marker([42.352609, -71.05]).addTo(map)
+			.bindPopup("<b>Sample A</b><br />01/15/15").openPopup();
+
+		L.marker([42.345, -71.06]).addTo(map)
+                        .bindPopup("<b>Sample B</b><br />01/15/15").openPopup();
+
+		L.marker([42.352609, -71.07]).addTo(map)
+                        .bindPopup("<b>Sample C</b><br />01/15/15").openPopup();
+
+
+		L.marker([42.35, -71.08]).addTo(map)
+                        .bindPopup("<b>Sample D</b><br />01/15/15").openPopup();
+
+
+		L.circle([42.352609, -71.065868], 1700, {
+			color: 'red',
+			fillColor: '#f03',
+			fillOpacity: 0.1
+		 }).addTo(map).bindPopup("I am a circle.");
+		
+		//L.polygon([
+
+	//		[51.509, -0.08],
+//
+//			[51.503, -0.06],
+
+//			[51.51, -0.047]
+
+//		]).addTo(map).bindPopup("I am a polygon.");
+
+		var popup = L.popup();
+
+		function onMapClick(e) {
+			popup
+				.setLatLng(e.latlng)
+				.setContent("You clicked the map at " + e.latlng.toString())
+				.openOn(map);
+		}
+		map.on('click', onMapClick);
+
+	</script>
+
 	</body>
 </html>
