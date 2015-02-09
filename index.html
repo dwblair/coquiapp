@@ -15,10 +15,17 @@
 		<script src="js/p5.sound.min.js"></script>
 		<script src="js/p5handler.js"></script>
 		<script src="js/instafeed.min.js"></script>
+<style>
+.Textwrap {
+float: right;
+margin: 10px;
+}
+</style>
 
 	</head>
 	<body>
 
+<!--
 <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,18 +35,52 @@
       </button>
       <a class="navbar-brand" href="#">Coqui App</a>
       
-    </div><!-- /.container -->
-</div><!-- /.navbar -->
+-->
   
 <!-- HEADER 
 =================================-->
 
-<div class="jumbotron text-center">
+<div>
+<p><P>
 </div>
+<div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>What is this?</h2>
+          <p>
+The <a href="http://publiclab.org/wiki/coqui">Coqui</a> is a simple electronic platform that converts sensor readings (like light levels, temperature levels, or conductivity) to an audio frequency output. This page is a way of analyzing the audio signal that comes out of a Coqui.
+</p>
+          <p><a class="btn btn-default" href="http://publiclab.org/wiki/coqui" role="button">Example experiments with the Coqui &raquo;</a></p>
+
+        </div>
+
+<div class="col-md-4">
+          <h2>How do I start?</h2>
+          <p>
+<img width=100 src="assets/test.jpg"</br> <p>Turn on your Coqui, and plug the audio cable into the audio port on your laptop. </p>
+
+       <p><a class="btn btn-default" href="http://publiclab.org/wiki/coqui" role="button">Troubleshooting your connection &raquo;</a></p>
+ 
+</div>
+
+<div class="col-md-4">
+          <h2>Can I make my own?</h2>
+          <p>
+<p>Yes! You can make your own Coqui device, following the instructions <a href="#">here</a>; and you can even copy this entire web page, modify it to do new and amazing things, and then host it for free on <a href="http://github.com">github</a>!  </p>  
+       <p><a class="btn btn-default" href="http://publiclab.org/wiki/coqui" role="button">Fork this web app &raquo;</a></p>
+
+</div>
+
+</div>
+</div>
+
+
 <!-- /header container-->
 
 <!-- CONTENT
 =================================-->
+
 <div class="container">
     <div class="row">
         <div class="col-md-8"><div class="well" id="p5fft"></div></div>
@@ -48,8 +89,6 @@
 
     </div>
     <div class="row">
-        <!-- <div class="col-md-6" ><div class="well" id="p5bar"></div></div> -->
-        <div class="col-md-6"><div class="well">Fork this repo <a href="http://github.com/dwblair/coquiapp">here.<a/></div></div>
 
 <div class="col-md-7"><div class="well"><iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Boston%2C%20MA%2C%20United%20States&key=AIzaSyAceDYtQ2v6SDia9mBzF9cdF_g2X5uAzFA"></iframe></div></div>
     </div>
