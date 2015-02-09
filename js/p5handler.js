@@ -1,5 +1,9 @@
 var mic, fft, specBar;
+var audioCtx = new AudioContext();
+var mySampleRate = audioCtx.sampleRate;
+var binNum=2048.;
 
+var dF = mySampleRate/binNum;
 
 function setup(){
     colorMode(RGB);
@@ -42,7 +46,7 @@ function draw(){
     specBar.rect(map(maxFre,0,spectrum.length,0,500)+3,0,5,100);
     image(specBar,0,150,710,10);
     fill(255,0,0);
-    document.getElementById('p5bar').innerHTML = "Dominant Frequency: " + maxFre;
+    document.getElementById('p5bar').innerHTML = "Dominant Frequency (Hz): " + maxFre*dF;
 }
 
 
